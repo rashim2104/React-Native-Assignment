@@ -2,11 +2,111 @@
   {
     "id": "q1",
     "questionNumber": 1,
-    "companyId": "1",
+    "companyId": "phonepe",
     "companyName": "PhonePe",
-    "companyLogoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/PhonePe_Logo.svg/512px-PhonePe_Logo.svg.png",
+    "companyLogoUrl": "phonepe",
     "text": "API latency is variable & app is sluggish. How do you design UI safely?",
     "durationMinutes": 2,
-    "completedTodayCount": 2312
+    "completedTodayCount": 2312,
+    "status": "active"
+  },
+  {
+    "id": "q2",
+    "questionNumber": 2,
+    "companyId": "amazon",
+    "companyName": "Amazon",
+    "companyLogoUrl": "amazon",
+    "text": "How would you implement a real-time order tracking system with offline support?",
+    "durationMinutes": 3,
+    "completedTodayCount": 1847,
+    "status": "next"
+  },
+  {
+    "id": "q3",
+    "questionNumber": 3,
+    "companyId": "phonepe",
+    "companyName": "PhonePe",
+    "companyLogoUrl": "phonepe",
+    "text": "Describe how you would architect a payment flow that handles network failures gracefully.",
+    "durationMinutes": 2,
+    "completedTodayCount": 1523,
+    "status": "locked"
+  },
+  {
+    "id": "q4",
+    "questionNumber": 4,
+    "companyId": "google",
+    "companyName": "Google",
+    "companyLogoUrl": "google",
+    "text": "How do you optimize a React Native app for smooth 60fps scrolling with heavy image content?",
+    "durationMinutes": 3,
+    "completedTodayCount": 2089,
+    "status": "locked"
+  },
+  {
+    "id": "q5",
+    "questionNumber": 5,
+    "companyId": "microsoft",
+    "companyName": "Microsoft",
+    "companyLogoUrl": "microsoft",
+    "text": "Design a cross-platform component library that works across mobile and desktop.",
+    "durationMinutes": 3,
+    "completedTodayCount": 1654,
+    "status": "locked"
+  },
+  {
+    "id": "q6",
+    "questionNumber": 6,
+    "companyId": "facebook",
+    "companyName": "Facebook",
+    "companyLogoUrl": "facebook",
+    "text": "How would you implement infinite scroll with virtualized lists and prefetching?",
+    "durationMinutes": 2,
+    "completedTodayCount": 1932,
+    "status": "locked"
+  },
+  {
+    "id": "q7",
+    "questionNumber": 7,
+    "companyId": "amazon",
+    "companyName": "Amazon",
+    "companyLogoUrl": "amazon",
+    "text": "Explain your approach to state management in a large-scale e-commerce app.",
+    "durationMinutes": 3,
+    "completedTodayCount": 1478,
+    "status": "locked"
+  },
+  {
+    "id": "q8",
+    "questionNumber": 8,
+    "companyId": "facebook",
+    "companyName": "Facebook",
+    "companyLogoUrl": "facebook",
+    "text": "How do you handle deep linking and navigation state restoration in React Native?",
+    "durationMinutes": 2,
+    "completedTodayCount": 1267,
+    "status": "locked"
+  },
+  {
+    "id": "q9",
+    "questionNumber": 9,
+    "companyId": "microsoft",
+    "companyName": "Microsoft",
+    "companyLogoUrl": "microsoft",
+    "text": "Describe strategies for reducing app startup time in a complex React Native application.",
+    "durationMinutes": 3,
+    "completedTodayCount": 1891,
+    "status": "locked"
+  },
+  {
+    "id": "q10",
+    "questionNumber": 10,
+    "companyId": "google",
+    "companyName": "Google",
+    "companyLogoUrl": "google",
+    "text": "How would you implement accessible UI components that work with screen readers?",
+    "durationMinutes": 2,
+    "completedTodayCount": 1156,
+    "status": "locked"
   }
 ]

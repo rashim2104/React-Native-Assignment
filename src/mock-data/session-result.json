@@ -2,18 +2,45 @@
   "questionId": "q1",
   "questionText": "API latency is variable & app is sluggish. How do you design UI safely?",
   "companyName": "PhonePe",
+  "companyId": "phonepe",
   "smartSummary": {
     "whatWorkedWell": [
-      "Add your bullet points here based on the Figma"
+      "Strong understanding of optimistic UI patterns — correctly identified when to update the UI before server confirmation to reduce perceived latency.",
+      "Good use of skeleton screens and shimmer placeholders to maintain visual continuity during data fetches.",
+      "Mentioned debouncing and throttling API calls to prevent UI jank from rapid state updates.",
+      "Demonstrated awareness of caching strategies using stale-while-revalidate to serve content instantly."
     ],
     "overallTakeaways": [
-      "Add your bullet points here based on the Figma"
+      "Consider discussing error boundaries and fallback UI more explicitly — what happens when the optimistic update fails?",
+      "Could strengthen the answer by mentioning specific tools like React Query or SWR for data fetching patterns.",
+      "The explanation of background sync was solid but could include retry strategies with exponential backoff.",
+      "Overall a well-structured response that covered both user experience and technical implementation."
     ]
   },
   "keyMoments": [
     {
+      "timestamp": "00:23",
+      "description": "Opened strong by framing the problem as a UX challenge, not just a technical one.",
+      "type": "positive"
+    },
+    {
+      "timestamp": "01:07",
+      "description": "Missed opportunity to mention connection-aware loading — adapting UI based on network speed.",
+      "type": "negative"
+    },
+    {
       "timestamp": "01:37",
-      "description": "Add key moment description here",
+      "description": "Excellent explanation of optimistic updates with rollback on failure scenarios.",
+      "type": "positive"
+    },
+    {
+      "timestamp": "03:12",
+      "description": "Could have elaborated more on how to prioritize which API calls are critical vs deferrable.",
+      "type": "negative"
+    },
+    {
+      "timestamp": "04:45",
+      "description": "Strong closing — tied everything back to measurable metrics like Time to Interactive and First Contentful Paint.",
       "type": "positive"
     }
   ],

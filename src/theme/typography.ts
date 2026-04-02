@@ -1,20 +1,27 @@
 import { Platform } from "react-native";
 
 /**
- * Typography
- *
- * Font family definitions using the Inter font loaded via expo-font.
- * See README for how to load fonts in App.tsx.
+ * Typography — Inter + Manrope font families
  */
 
 export const typography = {
   fonts: {
     inter: {
-      light: "Inter_300Light",
-      normal: "Inter_400Regular",
+      regular: "Inter_400Regular",
       medium: "Inter_500Medium",
       semiBold: "Inter_600SemiBold",
       bold: "Inter_700Bold",
+      extraBold: "Inter_800ExtraBold",
+    },
+    manrope: {
+      regular: "Manrope_400Regular",
+      medium: "Manrope_500Medium",
+      semiBold: "Manrope_600SemiBold",
+      bold: "Manrope_700Bold",
+      extraBold: "Manrope_800ExtraBold",
+    },
+    onest: {
+      extraBold: "Onest_800ExtraBold",
     },
     system: Platform.select({
       ios: "System",
@@ -24,13 +31,16 @@ export const typography = {
   },
 
   sizes: {
-    xs: 11,
+    xxs: 11,
+    xs: 12,
     s: 13,
+    sm: 14,
     m: 15,
-    l: 17,
-    xl: 20,
+    ml: 16,
+    l: 18,
+    xl: 23,
     xxl: 24,
-    xxxl: 30,
+    xxxl: 32,
     display: 36,
   },
 } as const;

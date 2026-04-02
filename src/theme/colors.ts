@@ -1,83 +1,136 @@
 /**
- * ReadyU Brand Color Palette
- *
- * Use these tokens throughout your components.
- * Do NOT use hardcoded hex values in component files.
+ * ReadyAI Brand Color Palette — matched to Figma design
  */
 
 export const palette = {
-  // Brand
+  // Orange (Primary brand)
   orange10: "#FFF7ED",
   orange20: "#FFEDD5",
-  orange30: "#FED7AA",
-  orange40: "#FB923C",
-  orange50: "#F97316",
-  orange60: "#EA580C",
-  orange70: "#C2410C",
+  orange30: "#BF5F0A",
+  orange40: "#FF7800",
+  orange50: "#FF5000",
 
-  // Greens (used on Feedback / Highlights screens)
-  green10: "#F0FDF4",
-  green20: "#DCFCE7",
-  green30: "#86EFAC",
-  green40: "#4ADE80",
-  green50: "#22C55E",
-  green60: "#16A34A",
+  // Green
+  green10: "#DAF2E6",
+  green15: "#E6F2F0",
+  green20: "#95E5BD",
+  green30: "#57D997",
+  green40: "#13BF69",
+  green50: "#79D634",
+  green60: "#00AA2B",
+  green70: "#D8F7C2",
 
-  // Grays
-  gray10: "#F9FAFB",
-  gray20: "#F3F4F6",
-  gray30: "#E5E7EB",
-  gray40: "#D1D5DB",
-  gray50: "#9CA3AF",
-  gray60: "#6B7280",
-  gray70: "#4B5563",
-  gray80: "#374151",
-  gray90: "#1F2937",
+  // Yellow
+  yellow10: "#FFF6D9",
+  yellow20: "#FFF0BF",
+  yellow40: "#FFD033",
+  yellow50: "#BF9C26",
+  yellow55: "#C69A00",
+  yellow60: "#C19400",
+  yellow65: "#886418",
+  yellow70: "#806B26",
+  yellow80: "#403616",
+
+  // Grey
+  grey00: "#FFFFFF",
+  grey05: "#F5F5F8",
+  grey10: "#F5F5F8",
+  grey15: "#EFEFF4",
+  grey20: "#E5E5EA",
+  grey25: "#D1D1D6",
+  grey30: "#AEAEB2",
+  grey40: "#8E8E93",
+  grey50: "#6C6C70",
+  grey60: "#48484A",
+  grey70: "#2C2C2E",
+  grey80: "#1C1C1E",
+  grey90: "#0B0B0D",
+
+  // Blue
+  blue10: "#E5F2FF",
+  blue20: "#B2D9FF",
+  blue40: "#2196F3",
+  blue60: "#1F364D",
 
   // Utility
   white: "#FFFFFF",
   black: "#000000",
   transparent: "transparent",
+
+  // Overlay / Strokes
+  blackOverlay50: "rgba(0,0,0,0.5)",
+  blackOverlay25: "rgba(0,0,0,0.25)",
+
+  // Special
+  settingsTitle: "#152623",
+  trialCtaText: "#886418",
+  trialCtaBgStart: "#F8E9CB",
+  trialCtaBgEnd: "#FEFAF5",
+  trialCtaShadow: "#FBECD3",
 } as const;
 
 export const colors = {
   // Backgrounds
   background: palette.white,
-  backgroundSecondary: palette.gray10,
+  backgroundSecondary: palette.grey05,
   backgroundFeedback: palette.green10,
-  backgroundHighlights: palette.green10,
 
   // Brand
-  primary: palette.orange50,
-  primaryLight: palette.orange10,
-  primaryDark: palette.orange60,
+  primary: palette.orange40,
+  primaryDark: palette.orange50,
 
   // Text
-  textPrimary: palette.gray90,
-  textSecondary: palette.gray60,
-  textDisabled: palette.gray40,
+  textPrimary: palette.grey80,
+  textSecondary: palette.grey50,
+  textTertiary: palette.grey30,
+  textBody: palette.grey60,
+  textDark: palette.grey90,
   textInverse: palette.white,
-  textLink: palette.orange50,
+  textLink: palette.orange40,
 
   // Border
-  border: palette.gray30,
-  borderFocused: palette.orange50,
-
-  // Feedback / status
-  success: palette.green50,
-  successLight: palette.green10,
-  error: "#EF4444",
-  errorLight: "#FEF2F2",
+  border: palette.grey20,
+  borderLight: palette.grey15,
 
   // Cards
   cardBackground: palette.white,
-  cardBorder: palette.gray30,
+  cardBorder: palette.grey20,
 
-  // Button
-  buttonPrimary: palette.orange50,
-  buttonPrimaryText: palette.white,
-  buttonDisabled: palette.gray30,
-  buttonDisabledText: palette.gray50,
+  // Question cards
+  questionActiveBackground: palette.yellow20,
+  questionActiveShadow: palette.yellow60,
+  questionActiveBadge: palette.yellow40,
+  questionInactiveBackground: palette.grey15,
+  questionInactiveShadow: palette.grey40,
+  questionInactiveBadge: palette.grey25,
+
+  // Course switcher
+  courseSwitcherBackground: palette.yellow10,
+  courseSwitcherShadow: palette.yellow50,
+
+  // Bottom sheet / popup
+  popupBackground: palette.yellow40,
+  popupButtonDark: palette.yellow70,
+  popupButtonDarkShadow: palette.yellow80,
+
+  // Green accents
+  success: palette.green40,
+  successLight: palette.green10,
+  streakBackground: palette.green30,
+  closeButtonBackground: palette.green20,
+
+  // Bottom nav
+  tabActive: palette.orange40,
+  tabInactive: palette.grey50,
+  storeBackground: palette.blue10,
+  storeBorder: palette.blue20,
+
+  // Promo
+  promoText: palette.yellow50,
+
+  // Settings
+  settingsBackground: palette.grey05,
+  trialCardBackground: palette.grey80,
 } as const;
 
 export type Colors = typeof colors;

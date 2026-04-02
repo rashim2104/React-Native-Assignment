@@ -1,28 +1,32 @@
 /**
- * Spacing Scale
- *
- * Use named tokens instead of magic numbers for all margin/padding/gap values.
+ * Spacing Scale — matched to Figma design
  */
 
 export const spacing = {
   xxxs: 2,
   xxs: 4,
-  xs: 8,
-  s: 12,
-  m: 16,
-  l: 20,
-  xl: 24,
-  xxl: 32,
-  xxxl: 40,
+  xs: 6,
+  s: 8,
+  m: 12,
+  l: 16,
+  xl: 20,
+  xxl: 24,
+  xxxl: 32,
   giga: 64,
 
   // Semantic
-  screenPadding: 20,
+  screenPadding: 16,
   cardPadding: 16,
   cardRadius: 16,
-  buttonRadius: 24,
+  cardRadiusLarge: 24,
+  buttonRadius: 12,
   inputRadius: 12,
+  pillRadius: 9999,
+  questionCardRadius: 30,
+  bottomSheetRadius: 24,
   avatarSize: 56,
+  sectionGap: 12,
+  itemGap: 8,
 } as const;
 
 export type Spacing = typeof spacing;

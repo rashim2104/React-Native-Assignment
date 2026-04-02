@@ -1,7 +1,32 @@
 [
   {
-    "id": "1",
+    "id": "phonepe",
     "name": "PhonePe",
-    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/PhonePe_Logo.svg/512px-PhonePe_Logo.svg.png"
+    "logoUrl": "phonepe"
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "logoUrl": "amazon"
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "logoUrl": "google"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "logoUrl": "microsoft"
+  },
+  {
+    "id": "facebook",
+    "name": "Facebook",
+    "logoUrl": "facebook"
+  },
+  {
+    "id": "swiggy",
+    "name": "Swiggy",
+    "logoUrl": "swiggy"
   }
 ]
