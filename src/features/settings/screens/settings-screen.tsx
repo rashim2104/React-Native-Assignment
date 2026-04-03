@@ -1,16 +1,33 @@
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Dimensions,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "expo-image";
 import { Feather } from "@expo/vector-icons";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
+import { GlossyOverlay } from "@/components/ui/glossy-overlay";
 import { useAuth } from "@/navigation/auth-context";
 import type { HomeStackParamList } from "@/navigation/types";
 import { palette } from "@/theme/colors";
 import { spacing } from "@/theme/spacing";
 import { typography } from "@/theme/typography";
 import userData from "@/mock-data/user.json";
+
+const TRIAL_CARD_WIDTH =
+  Dimensions.get("window").width - spacing.screenPadding * 2;
+const TRIAL_CARD_HEIGHT = 260;
+
+const TRIAL_BANDS = [
+  { x: 50, y: -30, width: 28, height: 350, rotation: 45 },
+  { x: 100, y: -20, width: 30, height: 370, rotation: 45 },
+];
 
 type Props = NativeStackScreenProps<HomeStackParamList, "Settings">;
 
@@ -23,11 +40,16 @@ export function SettingsScreen({ navigation }: Props) {
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
+        style={styles.scrollView}
       >
         {/* Top Nav */}
         <View style={styles.topNav}>
           <Pressable onPress={() => navigation.goBack()} hitSlop={8}>
-            <Feather name="chevron-left" size={26} color={palette.settingsTitle} />
+            <Feather
+              name="chevron-left"
+              size={26}
+              color={palette.settingsTitle}
+            />
           </Pressable>
           <Text style={styles.topNavTitle}>Your Profile</Text>
           <View style={styles.topNavSpacer} />
@@ -35,6 +57,14 @@ export function SettingsScreen({ navigation }: Props) {
 
         {/* Trial Card */}
         <View style={styles.trialCard}>
+          <GlossyOverlay
+            width={TRIAL_CARD_WIDTH}
+            height={TRIAL_CARD_HEIGHT}
+            borderRadius={spacing.xxxl}
+            bands={TRIAL_BANDS}
+            inset={2}
+            opacity={0.15}
+          />
           <View style={styles.trialCardContent}>
             <Text style={styles.trialTitle}>3 days free trial for</Text>
             <Text style={styles.trialPrice}>₹1</Text>
@@ -47,6 +77,7 @@ export function SettingsScreen({ navigation }: Props) {
             contentFit="contain"
           />
           <View style={styles.trialCtaWrapper}>
+            <View style={styles.trialCtaBackdrop} />
             <LinearGradient
               colors={[palette.trialCtaBgStart, palette.trialCtaBgEnd]}
               start={{ x: 0, y: 0 }}
@@ -98,13 +129,13 @@ export function SettingsScreen({ navigation }: Props) {
           <View style={styles.divider} />
           <MenuItem icon="log-out" label="Log out" onPress={onLogout} />
         </View>
-
-        {/* Footer */}
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>App version v2.14.2</Text>
-          <Text style={styles.footerText}>Made with ❤️ from India</Text>
-        </View>
       </ScrollView>
+
+      {/* Footer */}
+      <View style={[styles.footer, { paddingBottom: insets.bottom || 24 }]}>
+        <Text style={styles.footerText}>App version v2.14.2</Text>
+        <Text style={styles.footerText}>Made with ❤️ from India</Text>
+      </View>
     </View>
   );
 }
@@ -139,9 +170,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: palette.grey05,
   },
+  scrollView: {
+    flex: 1,
+  },
   scrollContent: {
     paddingHorizontal: spacing.screenPadding,
-    paddingBottom: 50,
+    paddingBottom: spacing.xl,
   },
 
   // Top Nav
@@ -193,25 +227,29 @@ const styles = StyleSheet.create({
   },
   trialCharacter: {
     position: "absolute",
-    top: 0,
-    right: 0,
-    width: 147,
-    height: 162,
+    top: -35,
+    right: -25,
+    width: 220,
+    height: 235,
   },
   trialCtaWrapper: {
     paddingHorizontal: spacing.l,
     marginTop: spacing.l,
+  },
+  trialCtaBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    width: "100%",
+    left: 16,
+    top: 4,
+    height: 48,
+    borderRadius: 16,
+    backgroundColor: "#C9B9A5",
   },
   trialCtaButton: {
     height: 48,
     borderRadius: 16,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: palette.trialCtaShadow,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 1,
-    shadowRadius: 0,
-    elevation: 4,
   },
   trialCtaText: {
     fontFamily: typography.fonts.inter.extraBold,
@@ -264,7 +302,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: spacing.m,
+    paddingVertical: spacing.l,
   },
   infoRowLeft: {
     flexDirection: "row",
@@ -299,7 +337,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: spacing.m,
+    paddingVertical: spacing.xl,
   },
   menuRowLeft: {
     flexDirection: "row",
@@ -318,8 +356,9 @@ const styles = StyleSheet.create({
   // Footer
   footer: {
     alignItems: "center",
-    paddingTop: spacing.xl,
-    paddingBottom: 50,
+    paddingTop: spacing.m,
+    paddingBottom: spacing.m,
+    backgroundColor: palette.grey05,
   },
   footerText: {
     fontFamily: typography.fonts.inter.medium,

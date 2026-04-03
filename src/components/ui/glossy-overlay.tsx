@@ -16,6 +16,7 @@ interface GlossyOverlayProps {
   borderRadius: number;
   bands: Band[];
   inset?: number;
+  opacity?: number;
 }
 
 export function GlossyOverlay({
@@ -24,6 +25,7 @@ export function GlossyOverlay({
   borderRadius,
   bands,
   inset = 4,
+  opacity = 0.4,
 }: GlossyOverlayProps) {
   const clipId = `glossy${useId()}`;
 
@@ -57,7 +59,7 @@ export function GlossyOverlay({
             width={band.width}
             height={band.height}
             fill="white"
-            fillOpacity={0.4}
+            fillOpacity={opacity}
             transform={`rotate(${band.rotation} ${band.x} ${band.y})`}
           />
         ))}
